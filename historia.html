@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de Jerez de los Caballeros</title>
+    <link rel="stylesheet" href="estiloshistoria.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+    <div class="language-selector">
+        <label for="idioma">Idioma:</label>
+        <select id="idioma" name="idioma">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="fr">Francés</option>
+        </select>
+    </div>
+    
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="autobus.html">Visita</a></li>
+                    <li><a href="contacto2.html">Contacto</a></li>
+                </ul>
+            </nav>
+    <div class="search-bar-container">
+        <input type="text" id="search-input" placeholder="Buscar...">
+        <button onclick="highlightSearch()">Buscar</button>
+    </div>
+    <script>
+        function highlightSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const bodyText = document.body.innerHTML;
+            const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+            document.body.innerHTML = highlightedText;
+        }
+    </script>
+
+        </div>
+    </header>
+
+    <main class="main-content historia">
+        <div class="title">Historia de Jerez de los Caballeros</div>
+        <div class="subtitle">Un viaje por los siglos de nuestra ciudad</div>
+        
+        <div class="content-wrapper">
+            
+            <div class="text-block">
+                <p>Jerez de los Caballeros, situado en la provincia de Badajoz, Extremadura, es una ciudad con una rica y fascinante historia que se remonta a la época romana. Durante ese periodo, la ciudad era conocida como "Castrum Gerionis". En esta época, Jerez fue un importante asentamiento romano gracias a su estratégica ubicación en las rutas comerciales que conectaban Hispania con el resto del Imperio Romano. El auge de la ciudad en esta etapa se debió en gran medida a su agricultura y ganadería, que fueron fundamentales para su desarrollo. Se cree que en esta época ya se fundaron importantes edificaciones que luego serían testigos del paso de diversas civilizaciones.</p>
+                <p>Con la caída del Imperio Romano, Jerez pasó a ser parte del Reino Visigodo. Sin embargo, la etapa más transformadora de su historia comenzó con la llegada de los musulmanes en el siglo VIII. Durante su dominación, Jerez fue un importante centro comercial y cultural. Los musulmanes construyeron en la ciudad una imponente alcazaba, que todavía se conserva parcialmente y es uno de los principales atractivos turísticos de Jerez de los Caballeros. En este periodo, la ciudad fue conocida por su arquitectura islámica y su prosperidad económica, que se consolidó con la agricultura, la ganadería y el comercio.</p>
+                <p>Tras la Reconquista, en 1230, Jerez de los Caballeros fue tomada por Alfonso IX de León, quien la cedió a la Orden de Santiago. A partir de ese momento, la ciudad experimentó una gran transformación. La presencia de los caballeros de la Orden de Santiago permitió el crecimiento de la ciudad, que se convirtió en un importante centro de poder y defensa durante la lucha contra los musulmanes. La orden también impulsó el desarrollo de la ciudad mediante la construcción de iglesias, monasterios y fortificaciones, que aún hoy son testigos de la influencia medieval en la ciudad.</p>
+            </div>
+
+            <div class="images-column">
+                <img src="img/alcazaba2.jpg" alt="La alcazaba de Jerez" class="image-history">
+                <img src="img/san bartolome 2.jpg" alt="Iglesia de San Bartolomé" class="image-history">
+                <img src="img/san miguel 2.jpg" alt="Iglesia de San Miguel" class="image-history">
+            </div>
+            <div class="text-block">
+                <p>A lo largo de los siglos, Jerez de los Caballeros fue un lugar destacado en la región debido a su infraestructura, sus edificaciones medievales y su significativa influencia en la agricultura y la ganadería. En el siglo XV, la ciudad vivió un renacimiento económico y cultural gracias a la prosperidad de sus campos, que abastecían a muchas otras regiones. Los productos más destacados fueron el vino, el aceite de oliva, y el queso, que se exportaban a través de las rutas comerciales cercanas. En este período, la ciudad se enriqueció considerablemente y se desarrollaron importantes estructuras como el puente medieval y diversos edificios religiosos que reflejan la influencia gótica y renacentista.</p>
+                <p>Un monumento destacado de este periodo es la iglesia de San Bartolomé, construida en el siglo XIII, que presenta elementos del estilo gótico. Esta iglesia es un claro ejemplo de la riqueza cultural que poseía Jerez durante la Edad Media. También destaca la iglesia de San Miguel, construida en la misma época y considerada uno de los mejores ejemplos de la arquitectura religiosa de la región. Además, la ciudad sigue siendo conocida por su impresionante muralla medieval y la alcazaba, que testimonian la importancia estratégica de la ciudad durante la época de la Reconquista.</p>
+                <p>En la época moderna, Jerez de los Caballeros continuó evolucionando, enfrentando diversos retos pero también alcanzando logros importantes. Hoy en día, la ciudad sigue siendo un centro turístico y cultural de la región, con un importante patrimonio arquitectónico y una rica tradición que se conserva a través de sus festivales, sus monumentos y su gastronomía. Los habitantes de Jerez, orgullosos de su herencia, continúan celebrando su historia a través de eventos culturales, como las fiestas de la Semana Santa y la Fiesta de la Vendimia, que tienen lugar cada año, lo que mantiene viva la esencia de la ciudad y la conecta con sus raíces más profundas.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Explora Jerez y déjate llevar por su encanto.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/jerezdeloscaballeros.oficial/?locale=es_LA" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/aytojerezcaballeros/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>

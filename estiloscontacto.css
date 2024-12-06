@@ -1,0 +1,119 @@
+.form-container {
+    max-width: 1200px;     margin: 0 auto;
+    padding: 40px;
+    background: url('img/parchment_texture.jpg') center/cover no-repeat;
+    border-radius: 10px;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    max-width: 1000px;     margin: 0 auto;     padding: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     gap: 20px;     margin-bottom: 20px;
+}
+
+.form-message {
+    grid-column: 1 / span 2; }
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4B3B2E;
+}
+
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: calc(100% - 20px);     padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-enviar, .btn-borrar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-enviar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #45a049;
+}
+
+.btn-borrar {
+    background-color: #FF0000;
+    color: white;
+}
+
+.btn-borrar:hover {
+    background-color: #cc0000;
+}
+
+@media (max-width: 768px) {
+    .image-row, .form-grid, .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card, .table-container, .text-block {
+        width: 90%;
+    }
+
+    .card img, .image-history {
+        height: 250px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+
+    .image-row {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .text-block {
+        font-size: 16px;
+    }
+}

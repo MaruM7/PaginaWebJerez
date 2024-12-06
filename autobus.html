@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas de Autobus Urbano - Jerez de los Caballeros</title>
+    <link rel="stylesheet" href="estilosautobus.css"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            
+            <div class="language-selector">
+                <label for="idioma">Idioma:</label>
+                <select id="idioma" name="idioma">
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                    <option value="fr">Francés</option>
+                </select>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="autobus.html" >Visita</a></li>
+                    <li><a href="contacto2.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="highlightSearch()">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content rutas">
+        <div class="title">Rutas del Autobús Urbano</div>
+        <div class="subtitle">Explora las principales rutas y horarios de transporte público en Jerez de los Caballeros</div>
+        
+        <div class="content-wrapper">
+            
+            <div class="table-container">
+                <div class="bus-table">
+                    
+                    <div class="table-header">Rutas, Horarios y Paradas Principales</div>
+                    
+                    
+                    <div class="table-row">
+                        <div>Ruta 1</div>
+                        <div>06:00 - 22:00</div>
+                        <div>Calle Mayor, Plaza de España, Parque de los Llanos</div>
+                    </div>
+
+                    
+                    <div class="table-row">
+                        <div>Ruta 2</div>
+                        <div>07:00 - 21:00</div>
+                        <div>Estación de Autobuses, Calle de la Constitución, Plaza de la Iglesia</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div>Ruta 3</div>
+                        <div>08:00 - 20:00</div>
+                        <div>Avenida de la Paz, Plaza del Sol, Calle del Mar</div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="escudo-centered">
+                <img src="img/Coat_of_Arms_of_Jerez_de_los_Caballeros.svg.png" alt="Escudo de Jerez">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Explora Jerez y déjate llevar por su encanto.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/jerezdeloscaballeros.oficial/?locale=es_LA" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/aytojerezcaballeros/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+        function highlightSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const bodyText = document.body.innerHTML;
+            const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+            document.body.innerHTML = highlightedText;
+        }
+    </script>
+</body>
+</html>
