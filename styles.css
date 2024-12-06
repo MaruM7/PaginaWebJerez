@@ -216,7 +216,7 @@ img:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
         .image-row, .form-grid, .content-wrapper {
         flex-direction: column;
         gap: 20px;
