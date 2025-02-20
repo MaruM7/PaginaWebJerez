@@ -219,15 +219,116 @@ body > * {
         gap: 20px;
     }
 }
+
+/* Media Query para pantallas menores a 689px */
+@media (max-width: 689px) {
+    /* Ajustes generales */
+    .header {
+        padding: 15px 10px; /* Menos padding en pantallas pequeñas */
+    }
+
+    /* Menú de navegación */
+    .menu ul {
+        flex-direction: column; /* Menú en columna */
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 5px 0; /* Espacio más pequeño entre los elementos */
+    }
+
+    /* Barra de búsqueda */
+    .search-bar-container {
+        flex-direction: column; /* Alineamos la barra de búsqueda en columna */
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-bar-container input {
+        width: 80%; /* Menos espacio horizontal para input */
+        margin-bottom: 10px;
+    }
+
+    .search-bar-container button {
+        width: 80%; /* Ajustamos el tamaño del botón */
+    }
+
+    /* Escudo y cabecera */
+    .escudo-header {
+        position: relative;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 120px; /* Escudo más pequeño */
+        width: auto;
+    }
+
+    .title {
+        font-size: 32px; /* Título más pequeño */
+    }
+
+    .subtitle {
+        font-size: 18px; /* Subtítulo más pequeño */
+    }
+
+    /* Carrusel */
+    .carousel-inner img {
+        height: auto; /* Imagenes del carrusel más adaptables */
+        object-fit: cover;
+    }
+
+    /* Redes sociales */
+    .social-media img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Ajustes en el pie de página */
+    .footer {
+        flex-direction: column; /* Pie de página en columna */
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+}
+
+/* Media Query para pantallas entre 689px y 1024px */
+@media (max-width: 1024px) {
+    .menu ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .carousel-inner img {
+        height: 200px; /* Menor altura para imágenes del carrusel */
+        object-fit: cover;
+    }
+
+    .escudo-header {
+        left: 20px; /* Ajustamos la posición del escudo */
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .escudo-header {
     position: absolute;
     top: 10px;
-    bottom: 20px;
-    left: 20px;
+    left: 10%; 
     height: 150px;
     width: 150px;
     display: flex;
     align-items: center;
+    justify-content: center; 
 }
 
 .escudo-header img {
