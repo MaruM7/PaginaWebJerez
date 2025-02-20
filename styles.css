@@ -239,18 +239,18 @@ body > * {
 
     /* Barra de búsqueda */
     .search-bar-container {
-        flex-direction: column; /* Alineamos la barra de búsqueda en columna */
-        width: 100%;
+        flex-direction: row; /* Cambiar a fila para que input y botón estén uno al lado del otro */
+        width: 100%;  /* Aseguramos que ocupe el 100% del ancho */
         margin: 10px 0;
     }
 
     .search-bar-container input {
-        width: 80%; /* Menos espacio horizontal para input */
-        margin-bottom: 10px;
+        width: calc(100% - 90px);  /* Ajustamos el input para que ocupe todo el espacio disponible menos el del botón */
+        margin-bottom: 0;  /* Eliminamos el margen inferior para que no haya espacio innecesario */
     }
 
     .search-bar-container button {
-        width: 80%; /* Ajustamos el tamaño del botón */
+        width: 80px;  /* Establecemos un ancho fijo para el botón */
     }
 
     /* Escudo y cabecera */

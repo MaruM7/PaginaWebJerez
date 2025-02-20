@@ -29,9 +29,18 @@
             <script>
                 function highlightSearch() {
                     const query = document.getElementById('search-input').value.toLowerCase();
-                    const bodyText = document.body.innerHTML;
-                    const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
-                    document.body.innerHTML = highlightedText;
+                    const bodyText = document.body;
+                    const walker = document.createTreeWalker(bodyText, NodeFilter.SHOW_TEXT, null, false);
+                    let node;
+                    while (node = walker.nextNode()) {
+                        const textContent = node.textContent.toLowerCase();
+                        if (textContent.includes(query) && query !== "") {
+                            const highlighted = node.textContent.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+                            const span = document.createElement('span');
+                            span.innerHTML = highlighted;
+                            node.parentNode.replaceChild(span, node);
+                        }
+                    }
                 }
             </script>
         </div>
@@ -39,7 +48,6 @@
 
     <main class="main-content">
         <div class="language-selector">
-            <label for="idioma"></label>
             <select id="idioma" name="idioma">
                 <option value="es">Español</option>
                 <option value="en">Inglés</option>
@@ -99,8 +107,12 @@
     <footer class="footer">
         <p>Explora Jerez y déjate llevar por su encanto.</p>
         <div class="social-media">
-            <a href="https://www.facebook.com/jerezdeloscaballeros.oficial/?locale=es_LA" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/aytojerezcaballeros/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/jerezdeloscaballeros.oficial/?locale=es_LA" target="_blank" aria-label="Facebook Jerez de los Caballeros">
+                <img src="img/facebook2-removebg-preview.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/aytojerezcaballeros/?hl=es" target="_blank" aria-label="Instagram Jerez de los Caballeros">
+                <img src="img/instagram-removebg-preview.png" alt="Instagram">
+            </a>
         </div>
         <p xmlns:cc="http://creativecommons.org/ns#">Este trabajo está bajo la licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
     </footer>
