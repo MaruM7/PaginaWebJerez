@@ -6,10 +6,14 @@
     <title>Historia de Jerez de los Caballeros</title>
     <link rel="stylesheet" href="estiloshistoria.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
+            <a href="index.html" class="escudo-header">
+                <img src="img/JerezLogov4.png" alt="Escudo de Jerez de los Caballeros">
+            </a>            
             <nav class="menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -18,61 +22,80 @@
                     <li><a href="contacto2.html">Contacto</a></li>
                 </ul>
             </nav>
-    <div class="search-bar-container">
-        <input type="text" id="search-input" placeholder="Buscar...">
-        <button onclick="highlightSearch()">Buscar</button>
-    </div>
-    <script>
-        function highlightSearch() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const bodyText = document.body.innerHTML;
-            const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
-            document.body.innerHTML = highlightedText;
-        }
-    </script>
-
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="highlightSearch()">Buscar</button>
+            </div>
+            <script>
+                function highlightSearch() {
+                    const query = document.getElementById('search-input').value.toLowerCase();
+                    const bodyText = document.body.innerHTML;
+                    const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+                    document.body.innerHTML = highlightedText;
+                }
+            </script>
         </div>
     </header>
 
     <main class="main-content historia">
         <div class="language-selector">
-            <label for="idioma">Idioma:</label>
+            <label for="idioma"></label>
             <select id="idioma" name="idioma">
                 <option value="es">Español</option>
                 <option value="en">Inglés</option>
                 <option value="fr">Francés</option>
             </select>
         </div>
-        <div class="title">Historia de Jerez de los Caballeros</div>
-        <div class="subtitle">Un viaje por los siglos de nuestra ciudad</div>
+        <div class="title text-center">Historia de Jerez de los Caballeros</div>
+        <div class="subtitle text-center">Un viaje por los siglos de nuestra ciudad</div>
         
-        <div class="content-wrapper">
-            
-            <div class="text-block">
-                <p>Jerez de los Caballeros, situado en la provincia de Badajoz, Extremadura, es una ciudad con una rica y fascinante historia que se remonta a la época romana. Durante ese periodo, la ciudad era conocida como "Castrum Gerionis". En esta época, Jerez fue un importante asentamiento romano gracias a su estratégica ubicación en las rutas comerciales que conectaban Hispania con el resto del Imperio Romano. El auge de la ciudad en esta etapa se debió en gran medida a su agricultura y ganadería, que fueron fundamentales para su desarrollo. Se cree que en esta época ya se fundaron importantes edificaciones que luego serían testigos del paso de diversas civilizaciones.</p>
-                <p>Con la caída del Imperio Romano, Jerez pasó a ser parte del Reino Visigodo. Sin embargo, la etapa más transformadora de su historia comenzó con la llegada de los musulmanes en el siglo VIII. Durante su dominación, Jerez fue un importante centro comercial y cultural. Los musulmanes construyeron en la ciudad una imponente alcazaba, que todavía se conserva parcialmente y es uno de los principales atractivos turísticos de Jerez de los Caballeros. En este periodo, la ciudad fue conocida por su arquitectura islámica y su prosperidad económica, que se consolidó con la agricultura, la ganadería y el comercio.</p>
-                <p>Tras la Reconquista, en 1230, Jerez de los Caballeros fue tomada por Alfonso IX de León, quien la cedió a la Orden de Santiago. A partir de ese momento, la ciudad experimentó una gran transformación. La presencia de los caballeros de la Orden de Santiago permitió el crecimiento de la ciudad, que se convirtió en un importante centro de poder y defensa durante la lucha contra los musulmanes. La orden también impulsó el desarrollo de la ciudad mediante la construcción de iglesias, monasterios y fortificaciones, que aún hoy son testigos de la influencia medieval en la ciudad.</p>
-            </div>
+        <div class="container mt-4">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="img/fortaleza_templaria (1).jpg" alt="Fortaleza Templaria de Jerez" class="img-fluid img-fixed">
+                    <p>Fortaleza Templaria de Jerez de los Caballeros</p>
+                    <button class="btn-leer-mas" type="button" data-bs-toggle="collapse" data-bs-target="#historia1">
+                        Leer más
+                    </button>                    
+                    <div class="collapse mt-2" id="historia1">
+                        <p>La Fortaleza Templaria de Jerez de los Caballeros es uno de los símbolos más icónicos de la ciudad. Construida por los caballeros templarios en el siglo XIII sobre restos de una antigua alcazaba musulmana, esta imponente fortificación servía como defensa ante posibles invasiones. En su interior se vivieron momentos cruciales de la historia de la Orden del Temple, incluida la trágica ejecución de los últimos templarios tras la disolución de la orden en el siglo XIV. Hoy en día, sus murallas y torres ofrecen unas vistas impresionantes de la ciudad y sus alrededores.</p>
+                    </div>
+                </div>
 
-            <div class="images-column">
-                <img src="img/alcazaba2.jpg" alt="La alcazaba de Jerez" class="image-history">
-                <img src="img/san bartolome 2.jpg" alt="Iglesia de San Bartolomé" class="image-history">
-                <img src="img/san miguel 2.jpg" alt="Iglesia de San Miguel" class="image-history">
-            </div>
-            <div class="text-block">
-                <p>A lo largo de los siglos, Jerez de los Caballeros fue un lugar destacado en la región debido a su infraestructura, sus edificaciones medievales y su significativa influencia en la agricultura y la ganadería. En el siglo XV, la ciudad vivió un renacimiento económico y cultural gracias a la prosperidad de sus campos, que abastecían a muchas otras regiones. Los productos más destacados fueron el vino, el aceite de oliva, y el queso, que se exportaban a través de las rutas comerciales cercanas. En este período, la ciudad se enriqueció considerablemente y se desarrollaron importantes estructuras como el puente medieval y diversos edificios religiosos que reflejan la influencia gótica y renacentista.</p>
-                <p>Un monumento destacado de este periodo es la iglesia de San Bartolomé, construida en el siglo XIII, que presenta elementos del estilo gótico. Esta iglesia es un claro ejemplo de la riqueza cultural que poseía Jerez durante la Edad Media. También destaca la iglesia de San Miguel, construida en la misma época y considerada uno de los mejores ejemplos de la arquitectura religiosa de la región. Además, la ciudad sigue siendo conocida por su impresionante muralla medieval y la alcazaba, que testimonian la importancia estratégica de la ciudad durante la época de la Reconquista.</p>
-                <p>En la época moderna, Jerez de los Caballeros continuó evolucionando, enfrentando diversos retos pero también alcanzando logros importantes. Hoy en día, la ciudad sigue siendo un centro turístico y cultural de la región, con un importante patrimonio arquitectónico y una rica tradición que se conserva a través de sus festivales, sus monumentos y su gastronomía. Los habitantes de Jerez, orgullosos de su herencia, continúan celebrando su historia a través de eventos culturales, como las fiestas de la Semana Santa y la Fiesta de la Vendimia, que tienen lugar cada año, lo que mantiene viva la esencia de la ciudad y la conecta con sus raíces más profundas.</p>
+                <div class="col-md-4">
+                    <img src="img/santa_maria.jpg" alt="Iglesia de Santa Maria" class="img-fluid img-fixed">
+                    <p> Iglesia de Santa María de la Encarnación</p>
+                    <button class="btn-leer-mas" type="button" data-bs-toggle="collapse" data-bs-target="#historia2">
+                        Leer más
+                    </button>                    
+                    <div class="collapse mt-2" id="historia2">
+                        <p>La Iglesia de Santa María de la Encarnación es el templo más antiguo de Jerez de los Caballeros y uno de sus monumentos religiosos más importantes. De origen templario, su construcción inicial se remonta a los siglos XIII y XIV, aunque ha sufrido diversas reformas a lo largo del tiempo. Su estilo combina elementos góticos y barrocos, destacando su magnífico retablo mayor y su impresionante torre. Además, la iglesia alberga importantes imágenes religiosas y es el centro de numerosas festividades locales.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="img/torre_homenaje (1).jpg" alt="Torre del Homenaje" class="img-fluid img-fixed">
+                    <p>Torre del Homenaje </p>
+                    <button class="btn-leer-mas" type="button" data-bs-toggle="collapse" data-bs-target="#historia3">
+                        Leer más
+                    </button>                    
+                    <div class="collapse mt-2" id="historia3">
+                        <p>La Torre del Homenaje, también conocida como la "Torre Sangrienta", es una de las estructuras más emblemáticas de Jerez de los Caballeros. Situada dentro de la Fortaleza Templaria, esta torre se hizo tristemente célebre por ser el escenario donde, según la tradición, fueron ejecutados los últimos templarios en la ciudad tras la orden de exterminio de la Orden del Temple por parte del rey Felipe IV de Francia. Con su imponente presencia, esta torre sigue siendo un testigo silencioso de la turbulenta historia medieval de la ciudad.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer text-center mt-4">
         <p>Explora Jerez y déjate llevar por su encanto.</p>
         <div class="social-media">
             <a href="https://www.facebook.com/jerezdeloscaballeros.oficial/?locale=es_LA" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
             <a href="https://www.instagram.com/aytojerezcaballeros/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

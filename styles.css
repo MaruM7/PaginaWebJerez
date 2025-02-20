@@ -1,10 +1,13 @@
 * {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+}
 
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;     overflow-x: hidden;     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,12 +19,16 @@ body > * {
 }
 
 .header {
-    background-color: #4CAF50;     width: 100%;
-    padding: 10px 10px 20px;     text-align: center;
-    position: relative; }
+    background-color: #4CAF50;
+    width: 100%;
+    padding: 10px 10px 20px;
+    text-align: center;
+    position: relative;
+}
 
 .menu {
-    margin-top: 10px; }
+    margin-top: 10px;
+}
 
 .menu ul {
     list-style: none;
@@ -46,18 +53,9 @@ body > * {
 }
 
 .menu ul li a:hover {
-    background-color: #FF0000;     color: #fff;
+    background-color: #FF0000;
+    color: #fff;
 }
-
-.escudo-header {
-    position: absolute;
-    top: 0px;     left: 250px;     height: 80px;     display: flex;
-    align-items: center;     justify-content: center; }
-
-.escudo-header img {
-    height: 100%;     width: auto; }
-
-
 
 .main-content {
     display: flex;
@@ -71,234 +69,181 @@ body > * {
 }
 
 .title {
-    color: #4CAF50;     font-size: 64px;     font-style: italic;
+    color: #4CAF50;
+    font-size: 64px;
+    font-style: italic;
     font-weight: bold;
     font-family: monospace;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 24px;     font-style: italic;
+    font-size: 24px;
+    font-style: italic;
     font-weight: bold;
     font-family: monospace;
     color: #0f7514;
     margin-bottom: 30px;
 }
 
-.image-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;     width: 100%;
-    max-width: 1500px;     margin: 0 auto;
+.audio, .video {
+    margin-top: 20px;
 }
 
-.card {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 30px;     text-align: center;
-    width: 32%;     transition: transform 0.3s ease, border-color 0.3s ease; }
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
 
-.card img {
-    width: 100%;
-    height: 400px;     object-fit: cover;     border-radius: 5px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease; }
+.language-selector label {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #fff;
+}
 
-.card:hover {
-    transform: scale(1.05);     border: 2px solid #4CAF50; }
-
-.card:hover h3 {
-    color: #4CAF50; }
-
-.card img:hover {
-    transform: scale(1.1); }
-
-.card h3 {
-    margin: 0;
-    font-size: 24px; }
+.language-selector select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
 
 .footer {
-    background-color: #4CAF50;     color: #fff;
-    width: 100%;     text-align: center;
+    background-color: #4CAF50;
+    color: #fff;
+    width: 100%;
+    text-align: center;
     padding: 20px;
-    margin-top: auto;     display: flex;
+    margin-top: auto;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;     padding-right: 20px;     overflow: hidden; }
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
 
 .footer p {
     margin: 0;
     flex: 1;
     text-align: left;
-    font-size: 18px; }
+    font-size: 18px;
+}
 
 .social-media img {
-    width: 50px;     height: 50px;     margin: 0 15px; }
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+}
 
 .search-bar-container {
     display: flex;
     justify-content: center;
-    margin: 20px 0; }
+    margin: 20px 0;
+}
 
 .search-bar-container input {
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 5px 0 0 5px;
-    width: 300px; }
+    width: 300px;
+}
 
 .search-bar-container button {
     padding: 8px 15px;
     font-size: 14px;
     border: none;
-    background-color: #FF0000;     color: white;
+    background-color: #FF0000;
+    color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
 .search-bar-container button:hover {
-    background-color: #45a049; }
-
-.escudo-header {
-    top: 50px;     z-index: 10; }
-
-.language-selector {
-    position: absolute;
-    top: 10px;
-    right: 10px;     display: flex;
-    align-items: center;
-}
-
-.language-selector label {
-    margin-right: 5px;     font-size: 14px;
-    color: #fff; }
-
-.language-selector select {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
+    background-color: #45a049;
 }
 
 .language-selector {
-    position: absolute;
-    top: 10px;
-    right: 10px;     display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);     padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); }
-
-.language-selector label {
-    margin-right: 5px;     font-size: 14px;
-    color: #000; }
-
-.language-selector select {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
-
-.card img {
-    cursor: pointer; }
-
-img {
-    cursor: crosshair;
-    transition: transform 0.3s ease;
-}
-img:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-        .image-row, .form-grid, .content-wrapper {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;     }
-
-    .card img {
-        height: 250px;     }
-
-        .title {
-        font-size: 48px;     }
-    .subtitle {
-        font-size: 20px;     }
-    .text-block, .images-column {
-        width: 100%;         max-height: unset;     }
-
-        .social-media img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .footer p {
-        font-size: 16px;     }
-}
-
-@media (max-width: 1024px) {
-    .card {
-        width: 45%;     }
-
-    .image-row {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .text-block {
-        font-size: 16px;     }
-}
-
-.language-selector {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.language-selector label {
-    margin-right: 5px;
-    font-size: 14px;
-    color: #000;
-}
-
-.language-selector select {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.main-content {
-    position: relative;
-}
-
 @media (max-width: 768px) {
-    .language-selector {
-        position: static;
-        margin: 10px auto;
-        display: flex;
-        justify-content: center;
+    .image-row, .form-grid, .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 
-    .main-content {
-        position: relative;
+    .card {
+        width: 90%;
     }
+
+    .card img {
+        height: 250px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+
+    .image-row {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+.escudo-header {
+    position: absolute;
+    top: 10px;
+    bottom: 20px;
+    left: 20px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.escudo-header img {
+    height: 100%;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.escudo-header img:hover {
+    transform: scale(1.1);
+}
+.carousel-inner img {
+    width: 100%;
+    height: 30%; 
+    object-fit: cover; 
+}
+.carousel-item img {
+    transition: transform 0.5s ease-in-out;
 }
