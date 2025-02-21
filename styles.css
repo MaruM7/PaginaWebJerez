@@ -190,12 +190,12 @@ body > * {
 }
 
 body {
-    color: #333333; 
-    background-color: #ffffff;
+    color: #2C6B32; 
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 h1, h2, h3, .title, .subtitle {
-    color: #1e1e1e; 
+    color: #2C6B32;
 }
 
 
