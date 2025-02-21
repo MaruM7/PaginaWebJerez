@@ -1,3 +1,4 @@
+/* Estilos Modificados para AA */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,8 +16,8 @@ html, body {
 }
 
 .header {
-    background-color: #4CAF50;     width: 100%;
-    padding: 10px 10px 20px;     text-align: center;
+    background-color: #4CAF50; width: 100%;
+    padding: 10px 10px 20px; text-align: center;
     position: relative; }
 
 .menu {
@@ -44,42 +45,45 @@ html, body {
     background-color: #000;
 }
 
-.menu ul li a:hover {
-    background-color: #FF0000;     color: #fff;
+.menu ul li a:hover, .menu ul li a:focus {
+    background-color: #FF0000; color: #fff;
+    outline: 3px solid #FF0000;
 }
 
 .escudo-header {
     position: absolute;
-    top: 5px;     left: 30px;     height: 80px;     display: flex;
-    align-items: center;     justify-content: center; }
+    top: 5px; left: 30px; height: 80px; display: flex;
+    align-items: center; justify-content: center; }
 
 .escudo-header img {
-    height: 100%;     width: auto; }
+    height: 100%; width: auto;
+}
 
 .main-content.rutas {
     display: flex;
     flex-direction: column;
-    align-items: center;     padding: 20px;
+    align-items: center; padding: 20px;
     text-align: center;
-    background: url('img/parchment_texture.jpg') center/cover no-repeat;     color: #4B3B2E;     box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);     border-radius: 10px;
-    width: 95%;     max-width: 1300px;     margin: 30px auto; }
+    background: url('img/parchment_texture.jpg') center/cover no-repeat; color: #4B3B2E; box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2); border-radius: 10px;
+    width: 95%; max-width: 1300px; margin: 30px auto;
+}
 
 .title {
-    color: #4CAF50;     font-size: 64px;     font-style: italic;
-    font-weight: bold;     font-family: monospace;
+    color: #2C6B32; font-size: 64px; font-style: italic;
+    font-weight: bold; font-family: monospace;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 24px;     font-style: italic;
-    font-weight: bold;     font-family: monospace;
-    color: #0f7514;     margin-bottom: 30px;
+    font-size: 24px; font-style: italic;
+    font-weight: bold; font-family: monospace;
+    color: #1F5A21; margin-bottom: 30px;
 }
 
 .table-container {
     width: 100%;
     display: flex;
-    justify-content: center;     padding: 20px;
+    justify-content: center; padding: 20px;
 }
 
 .bus-table {
@@ -95,14 +99,16 @@ html, body {
 
 .table-header {
     font-weight: bold;
-    background-color: #4CAF50;     color: white;
+    background-color: #4CAF50; color: white;
     padding: 15px;
     text-align: center;
     border-radius: 5px;
-    grid-column: span 3; }
+    grid-column: span 3;
+}
 
 .table-row {
-    display: contents; }
+    display: contents;
+}
 
 .table-row div {
     padding: 10px;
@@ -115,60 +121,65 @@ html, body {
 }
 
 .footer {
-    background-color: #4CAF50;     color: #fff;
-    width: 100%;     text-align: center;
+    background-color: #4CAF50; color: #fff;
+    width: 100%; text-align: center;
     padding: 20px;
-    margin-top: auto;     display: flex;
+    margin-top: auto; display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;     padding-right: 20px;     overflow: hidden; }
+    padding-left: 20px; padding-right: 20px; overflow: hidden;
+}
 
 .footer p {
     margin: 0;
     flex: 1;
     text-align: left;
-    font-size: 18px; }
+    font-size: 18px;
+}
 
 .social-media img {
-    width: 50px;     height: 50px;     margin: 0 15px; }
+    width: 50px; height: 50px; margin: 0 15px;
+}
 
 .search-bar-container {
     display: flex;
     justify-content: center;
-    margin: 20px 0; }
+    margin: 20px 0;
+}
 
 .search-bar-container input {
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 5px 0 0 5px;
-    width: 300px; }
+    width: 300px;
+}
 
 .search-bar-container button {
     padding: 8px 15px;
     font-size: 14px;
     border: none;
-    background-color: #FF0000;     color: white;
+    background-color: #FF0000; color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
-.search-bar-container button:hover {
-    background-color: #45a049; }
-
-.escudo-header {
-    top: 50px;     z-index: 10; }
+.search-bar-container button:hover, .search-bar-container button:focus {
+    background-color: #45a049;
+    outline: 3px solid #FF0000;
+}
 
 .language-selector {
     position: absolute;
     top: 10px;
-    right: 10px;     display: flex;
+    right: 10px; display: flex;
     align-items: center;
 }
 
 .language-selector label {
-    margin-right: 5px;     font-size: 14px;
-    color: #fff; }
+    margin-right: 5px; font-size: 14px;
+    color: #fff;
+}
 
 .language-selector select {
     padding: 5px;
@@ -182,15 +193,17 @@ html, body {
 .language-selector {
     position: absolute;
     top: 10px;
-    right: 10px;     display: flex;
+    right: 10px; display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);     padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.9); padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 .language-selector label {
-    margin-right: 5px;     font-size: 14px;
-    color: #000; }
+    margin-right: 5px; font-size: 14px;
+    color: #000;
+}
 
 .language-selector select {
     padding: 5px;
@@ -199,59 +212,16 @@ html, body {
     border-radius: 5px;
     background-color: #fff;
     color: #000;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .escudo-centered {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; }
-
-.escudo-centered img {
-    max-width: 150px;     height: auto; }
-@media (max-width: 768px) {
-    .image-row, .form-grid, .content-wrapper {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .card, .table-container, .text-block {
-        width: 90%;
-    }
-
-    .card img, .image-history {
-        height: 250px;
-    }
-
-    .title {
-        font-size: 48px;
-    }
-
-    .subtitle {
-        font-size: 20px;
-    }
-
-    .footer p {
-        font-size: 16px;
-    }
-
-    .social-media img {
-        width: 40px;
-        height: 40px;
-    }
+    margin-top: 20px;
 }
 
-@media (max-width: 1024px) {
-    .card {
-        width: 45%;
-    }
-
-    .image-row {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .text-block {
-        font-size: 16px;
-    }
+.escudo-centered img {
+    max-width: 150px; height: auto;
 }

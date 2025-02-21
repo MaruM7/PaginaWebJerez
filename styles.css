@@ -52,9 +52,15 @@ body > * {
     background-color: #000;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover, .menu ul li a:focus {
     background-color: #FF0000;
     color: #fff;
+    border-color: #FF0000; /* Borde visible al hacer foco */
+}
+
+.menu ul li a:focus {
+    outline: 3px solid #FFD700; /* Añadido foco accesible */
+    outline-offset: 2px;
 }
 
 .main-content {
@@ -101,7 +107,7 @@ body > * {
 .language-selector label {
     margin-right: 5px;
     font-size: 14px;
-    color: #fff;
+    color: #333;  /* Mejora el contraste de texto */
 }
 
 .language-selector select {
@@ -169,11 +175,79 @@ body > * {
     background-color: #45a049;
 }
 
+.search-bar-container button:focus {
+    outline: 3px solid #FFD700; /* Foco en el botón */
+    outline-offset: 2px;
+}
+
 .language-selector {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Mejoras de contraste */
+body {
+    color: #333333; /* Color de texto oscuro */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+h1, h2, h3, .title, .subtitle {
+    color: #1e1e1e; /* Color más oscuro para títulos */
+}
+
+/* Links */
+a {
+    color: #0066cc; /* Color azul para los enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004999; /* Color al pasar el mouse por encima */
+}
+
+/* Botones */
+button {
+    background-color: #0066cc; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #004999; /* Fondo azul oscuro al pasar el mouse */
+}
+
+/* Estilos del Header */
+header {
+    background-color: #004999; /* Fondo azul oscuro */
+    color: white;
+    padding: 20px 0;
+}
+
+header a {
+    color: white; /* Enlaces blancos en el header */
+}
+
+header a:hover {
+    color: #ffcc00; /* Color amarillo para el hover */
+}
+
+/* Contraste en el Footer */
+footer {
+    background-color: #333333; /* Fondo oscuro en el footer */
+    color: white; /* Texto blanco */
+    padding: 20px;
+}
+
+footer a {
+    color: #ffcc00; /* Amarillo para enlaces en el footer */
+}
+
+footer a:hover {
+    color: #ffffff; /* Cambiar a blanco en hover */
 }
 
 @media (max-width: 768px) {
@@ -220,72 +294,64 @@ body > * {
     }
 }
 
-/* Media Query para pantallas menores a 689px */
 @media (max-width: 689px) {
-    /* Ajustes generales */
     .header {
-        padding: 15px 10px; /* Menos padding en pantallas pequeñas */
+        padding: 15px 10px;
     }
 
-    /* Menú de navegación */
     .menu ul {
-        flex-direction: column; /* Menú en columna */
+        flex-direction: column;
         align-items: center;
     }
 
     .menu ul li {
-        margin: 5px 0; /* Espacio más pequeño entre los elementos */
+        margin: 5px 0;
     }
 
-    /* Barra de búsqueda */
     .search-bar-container {
-        flex-direction: row; /* Cambiar a fila para que input y botón estén uno al lado del otro */
-        width: 100%;  /* Aseguramos que ocupe el 100% del ancho */
+        flex-direction: row;
+        width: 100%;
         margin: 10px 0;
     }
 
     .search-bar-container input {
-        width: calc(100% - 90px);  /* Ajustamos el input para que ocupe todo el espacio disponible menos el del botón */
-        margin-bottom: 0;  /* Eliminamos el margen inferior para que no haya espacio innecesario */
+        width: calc(100% - 90px);
+        margin-bottom: 0;
     }
 
     .search-bar-container button {
-        width: 80px;  /* Establecemos un ancho fijo para el botón */
+        width: 80px;
     }
 
-    /* Escudo y cabecera */
     .escudo-header {
         position: relative;
         top: 5px;
         left: 50%;
         transform: translateX(-50%);
-        height: 120px; /* Escudo más pequeño */
+        height: 120px;
         width: auto;
     }
 
     .title {
-        font-size: 32px; /* Título más pequeño */
+        font-size: 32px;
     }
 
     .subtitle {
-        font-size: 18px; /* Subtítulo más pequeño */
+        font-size: 18px;
     }
 
-    /* Carrusel */
     .carousel-inner img {
-        height: auto; /* Imagenes del carrusel más adaptables */
+        height: auto;
         object-fit: cover;
     }
 
-    /* Redes sociales */
     .social-media img {
         width: 40px;
         height: 40px;
     }
 
-    /* Ajustes en el pie de página */
     .footer {
-        flex-direction: column; /* Pie de página en columna */
+        flex-direction: column;
         text-align: center;
     }
 
@@ -294,7 +360,6 @@ body > * {
     }
 }
 
-/* Media Query para pantallas entre 689px y 1024px */
 @media (max-width: 1024px) {
     .menu ul {
         flex-direction: column;
@@ -302,12 +367,12 @@ body > * {
     }
 
     .carousel-inner img {
-        height: 200px; /* Menor altura para imágenes del carrusel */
+        height: 200px;
         object-fit: cover;
     }
 
     .escudo-header {
-        left: 20px; /* Ajustamos la posición del escudo */
+        left: 20px;
     }
 
     .footer {
@@ -323,12 +388,12 @@ body > * {
 .escudo-header {
     position: absolute;
     top: 10px;
-    left: 10%; 
+    left: 10%;
     height: 150px;
     width: 150px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .escudo-header img {
@@ -340,11 +405,13 @@ body > * {
 .escudo-header img:hover {
     transform: scale(1.1);
 }
+
 .carousel-inner img {
     width: 100%;
-    height: 30%; 
-    object-fit: cover; 
+    height: 30%;
+    object-fit: cover;
 }
+
 .carousel-item img {
     transition: transform 0.5s ease-in-out;
 }
