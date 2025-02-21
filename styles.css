@@ -12,6 +12,7 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
     background-color: #f7f4e9;
+    font: bolder;
 }
 
 body > * {
@@ -55,11 +56,11 @@ body > * {
 .menu ul li a:hover, .menu ul li a:focus {
     background-color: #FF0000;
     color: #fff;
-    border-color: #FF0000; /* Borde visible al hacer foco */
+    border-color: #FF0000; 
 }
 
 .menu ul li a:focus {
-    outline: 3px solid #FFD700; /* Añadido foco accesible */
+    outline: 3px solid #FFD700;
     outline-offset: 2px;
 }
 
@@ -107,7 +108,7 @@ body > * {
 .language-selector label {
     margin-right: 5px;
     font-size: 14px;
-    color: #333;  /* Mejora el contraste de texto */
+    color: #333;  
 }
 
 .language-selector select {
@@ -165,18 +166,19 @@ body > * {
     padding: 8px 15px;
     font-size: 14px;
     border: none;
-    background-color: #FF0000;
-    color: white;
+    background-color: #ED0000;
+    color: #FFFFEF;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .search-bar-container button:hover {
-    background-color: #45a049;
+    background-color:   #39853D;
 }
 
 .search-bar-container button:focus {
-    outline: 3px solid #FFD700; /* Foco en el botón */
+    outline: 3px solid #FFD700; 
     outline-offset: 2px;
 }
 
@@ -187,67 +189,47 @@ body > * {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Mejoras de contraste */
 body {
-    color: #333333; /* Color de texto oscuro */
-    background-color: #ffffff; /* Fondo blanco */
+    color: #333333; 
+    background-color: #ffffff;
 }
 
 h1, h2, h3, .title, .subtitle {
-    color: #1e1e1e; /* Color más oscuro para títulos */
+    color: #1e1e1e; 
 }
 
-/* Links */
+
 a {
-    color: #0066cc; /* Color azul para los enlaces */
+    color: #0066cc; 
     text-decoration: none;
 }
 
 a:hover {
-    color: #004999; /* Color al pasar el mouse por encima */
+    color: #004999; 
 }
 
-/* Botones */
+
 button {
-    background-color: #0066cc; /* Fondo azul */
-    color: white; /* Texto blanco */
+    background-color: #0066cc; 
+    color: #FFFFEF; 
+
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
 }
 
-button:hover {
-    background-color: #004999; /* Fondo azul oscuro al pasar el mouse */
-}
-
-/* Estilos del Header */
-header {
-    background-color: #004999; /* Fondo azul oscuro */
-    color: white;
-    padding: 20px 0;
-}
-
-header a {
-    color: white; /* Enlaces blancos en el header */
-}
-
-header a:hover {
-    color: #ffcc00; /* Color amarillo para el hover */
-}
-
-/* Contraste en el Footer */
 footer {
-    background-color: #333333; /* Fondo oscuro en el footer */
-    color: white; /* Texto blanco */
+    background-color: #333333; 
+    color: #FFFFEF;
     padding: 20px;
 }
 
 footer a {
-    color: #ffcc00; /* Amarillo para enlaces en el footer */
+    color: #ffcc00; 
 }
 
 footer a:hover {
-    color: #ffffff; /* Cambiar a blanco en hover */
+    color: #ffffff; 
 }
 
 @media (max-width: 768px) {
